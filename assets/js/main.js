@@ -150,6 +150,13 @@
 					// Disable submit.
 						$submit.disabled = true;
 
+            $.ajax({
+                url: "https://formspree.io/auc@cornellradiology.org", 
+                method: "POST",
+                data: {email: $form.children.email.value},
+                dataType: "json"
+            });
+            
 					// Process form.
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
